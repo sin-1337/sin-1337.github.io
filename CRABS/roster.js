@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name playerdetails
+// @name CRABS
 // @namespace https://www.bondageprojects.com/
-// @version 3.15
+// @version 0.35
 // @description Adds /players, shows info about players in the room, also adds whisper+
 // @author Sin
 // @match https://bondageprojects.elementfx.com/*
@@ -357,9 +357,9 @@ CommandCombine([{
 
     // if the filter var resolves to true, add the respective output.
     output_html = showme ? output_html + me_output_html : output_html;
-    output_html = showme ? output_html + admin_output_html : output_html;
-    output_html = showme ? output_html + vip_output_html : output_html;
-    output_html = showme ? output_html + player_output_html : output_html;
+    output_html = showadmins ? output_html + admin_output_html : output_html;
+    output_html = showvip ? output_html + vip_output_html : output_html;
+    output_html = showplayers ? output_html + player_output_html : output_html;
 
     // finish the table
     output_html += `</table>`
